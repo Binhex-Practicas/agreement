@@ -4,12 +4,13 @@ from odoo.tests.common import TransactionCase
 
 
 class TestProduct(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.test_product1 = self.env["product.template"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.test_product1 = cls.env["product.template"].create(
             {"name": "TestProduct"}
         )
-        self.test_product2 = self.env["product.product"].create({"name": "TestProduct"})
+        cls.test_product2 = cls.env["product.product"].create({"name": "TestProduct"})
 
     # TEST 01: Test onchange_type product.template
     def test_product_template_onchange_type(self):

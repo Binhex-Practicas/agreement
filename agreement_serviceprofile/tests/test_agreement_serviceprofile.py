@@ -7,29 +7,30 @@ from odoo.tests.common import TransactionCase
 
 
 class TestAgreementServiceProfile(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.test_customer = self.env["res.partner"].create({"name": "TestCustomer"})
-        self.agreement_type = self.env["agreement.type"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.test_customer = cls.env["res.partner"].create({"name": "TestCustomer"})
+        cls.agreement_type = cls.env["agreement.type"].create(
             {
                 "name": "Test Agreement Type",
                 "domain": "sale",
             }
         )
-        self.test_agreement = self.env["agreement"].create(
+        cls.test_agreement = cls.env["agreement"].create(
             {
                 "name": "TestAgreement",
                 "description": "Test",
                 "special_terms": "Test",
-                "partner_id": self.test_customer.id,
+                "partner_id": cls.test_customer.id,
                 "start_date": fields.Date.today(),
                 "end_date": fields.Date.today() + timedelta(days=365),
             }
         )
-        self.test_serviceprofile = self.env["agreement.serviceprofile"].create(
+        cls.test_serviceprofile = cls.env["agreement.serviceprofile"].create(
             {
                 "name": "TestServiceProfile",
-                "agreement_id": self.test_agreement.id,
+                "agreement_id": cls.test_agreement.id,
             }
         )
 
