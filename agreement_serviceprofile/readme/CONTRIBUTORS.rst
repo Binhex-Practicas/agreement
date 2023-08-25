@@ -16,3 +16,7 @@
 * `Mc Master Lawn and Pest Services <https://www.mcmpest.com>`_:
 
   * Brian McMaster <brian@mcmpest.com>
+
+* `Binhex System Solutions <https://www.binhex.es>`_:
+
+  * Jose Mendez <j.mendez@binhex.es>
