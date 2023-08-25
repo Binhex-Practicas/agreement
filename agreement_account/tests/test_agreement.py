@@ -6,23 +6,22 @@ from odoo.tests.common import TransactionCase
 
 
 class TestAgreement(TransactionCase):
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        cls.test_customer = cls.env["res.partner"].create({"name": "TestCustomer"})
-        cls.test_agreement_sale = cls.env["agreement"].create(
+    def setUp(self):
+        super().setUp()
+        self.test_customer = self.env["res.partner"].create({"name": "TestCustomer"})
+        self.test_agreement_sale = self.env["agreement"].create(
             {
                 "name": "TestAgreement-Sale",
                 "code": "SALE",
-                "partner_id": cls.test_customer.id,
+                "partner_id": self.test_customer.id,
                 "domain": "sale",
             }
         )
-        cls.test_agreement_purchase = cls.env["agreement"].create(
+        self.test_agreement_purchase = self.env["agreement"].create(
             {
                 "name": "TestAgreement-Purchase",
                 "code": "PURCHASE",
-                "partner_id": cls.test_customer.id,
+                "partner_id": self.test_customer.id,
                 "domain": "purchase",
             }
         )
