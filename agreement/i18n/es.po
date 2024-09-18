@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-14 16:28+0000\n"
-"PO-Revision-Date: 2023-07-21 00:11+0000\n"
+"PO-Revision-Date: 2023-09-20 21:26+0000\n"
 "Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -147,7 +147,7 @@ msgstr "Seguidores"
 #. module: agreement
 #: model:ir.model.fields,field_description:agreement.field_agreement__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Seguidores (Empresas)"
+msgstr "Seguidores (Socios)"
 
 #. module: agreement
 #: model:ir.model.fields,help:agreement.field_agreement__activity_type_icon
@@ -188,7 +188,6 @@ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
 #. module: agreement
 #: model:ir.model.fields,help:agreement.field_agreement__message_has_error
-#: model:ir.model.fields,help:agreement.field_agreement__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
 
@@ -326,11 +325,6 @@ msgid "Responsible User"
 msgstr "Usuario responsable"
 
 #. module: agreement
-#: model:ir.model.fields,field_description:agreement.field_agreement__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error en la entrega de SMS"
-
-#. module: agreement
 #: code:addons/agreement/models/agreement.py:0
 #: model_terms:ir.ui.view,arch_db:agreement.agreement_search
 #: model_terms:ir.ui.view,arch_db:agreement.agreement_type_search
@@ -450,6 +444,9 @@ msgstr "Cuando termina el acuerdo."
 #: model:ir.model.fields,help:agreement.field_agreement__start_date
 msgid "When the agreement starts."
 msgstr "Cuando comienza el acuerdo."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error en la entrega de SMS"
 
 #~ msgid "Followers (Channels)"
 #~ msgstr "Seguidores (Canales)"
